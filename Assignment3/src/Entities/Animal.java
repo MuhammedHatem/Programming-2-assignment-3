@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Entities;
 
 import java.awt.image.BufferedImage;
@@ -12,28 +7,35 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import pkjaya.ICrosser;
 
-/**
- *
- * @author Nayera Hatem
- */
 public class Animal implements pkjaya.ICrosser {
 
-    private final String type;
-    private final int weight;
+    private  String type;
+    private int weight;
 
-    Animal(String type, int weight) {
-        this.type = type;
-        this.weight = weight;
+    public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	public Animal() {
+        
     }
 
     @Override
     public boolean canSail() {
-        return false; //To change body of generated methods, choose Tools | Templates.
+        return false; 
     }
 
     @Override
     public double getWeight() {
-        return this.weight; //To change body of generated methods, choose Tools | Templates.
+        return this.weight; 
     }
 
     @Override
@@ -42,7 +44,7 @@ public class Animal implements pkjaya.ICrosser {
             case "herbivorous":
                 return 1;
             case "carnivorous":
-                return 2; //To change body of generated methods, choose Tools | Templates.
+                return 2;
             default:
                 return 0;
         }
@@ -72,7 +74,8 @@ public class Animal implements pkjaya.ICrosser {
 
     @Override
     public ICrosser makeCopy() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ICrosser obj = this;
+        return obj;
     }
 
     @Override

@@ -29,17 +29,17 @@ public class Plant implements pkjaya.ICrosser {
 
     @Override
     public boolean canSail() {
-        return false; //To change body of generated methods, choose Tools | Templates.
+        return false; 
     }
 
     @Override
     public double getWeight() {
-        return 0; //To change body of generated methods, choose Tools | Templates.
+        return 0; 
     }
 
     @Override
     public int getEatingRank() {
-        return 0; //To change body of generated methods, choose Tools | Templates.
+        return 0; 
     }
 
     @Override
@@ -57,7 +57,8 @@ public class Plant implements pkjaya.ICrosser {
 
     @Override
     public ICrosser makeCopy() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ICrosser plant = this;
+        return plant;
     }
 
     @Override

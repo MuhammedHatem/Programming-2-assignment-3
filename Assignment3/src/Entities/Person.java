@@ -18,13 +18,16 @@ import pkjaya.ICrosser;
  */
 public class Person implements pkjaya.ICrosser {
 
-    private final int weight;
+    private int weight;
 
-    Person(int weight) {
-        this.weight = weight;
+    public Person() {
     }
 
-    @Override
+    public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	@Override
     public boolean canSail() {
         return true; //To change body of generated methods, choose Tools | Templates.
     }
@@ -54,7 +57,7 @@ public class Person implements pkjaya.ICrosser {
 
     @Override
     public ICrosser makeCopy() {
-        Person temp = this;
+        ICrosser temp = this;
         return temp;
     }
 
